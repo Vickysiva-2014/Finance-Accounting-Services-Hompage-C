@@ -60,7 +60,7 @@ a {
   list-style: none;
   display: flex;
   gap: 30px;
-  left: 80px;
+  left: 60px;
   align-items: center;
   position: relative;
   z-index: 2;
@@ -2144,3 +2144,4 @@ body.dark-mode .footer-bottom {
 .dark-mode-toggle i {
   font-size: 16px;
 }
+
