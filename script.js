@@ -24,7 +24,7 @@ serviceCards.forEach(card => cardObserver.observe(card));
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 
-// Show the first slide
+
 slides[currentSlide].classList.add('active');
 
 function showNextSlide() {

@@ -24,7 +24,6 @@ function showVideo() {
 let feedbackIndex = 0;
 const feedbackSlides = document.querySelectorAll(".feedback-slide");
 
-// Show a specific slide
 function showFeedbackSlide(index) {
   feedbackSlides.forEach((slide, i) => {
     slide.classList.remove("active");
@@ -32,14 +31,12 @@ function showFeedbackSlide(index) {
   });
 }
 
-// Auto slide every 4 seconds
 function autoFeedbackSlide() {
   feedbackIndex = (feedbackIndex + 1) % feedbackSlides.length;
   showFeedbackSlide(feedbackIndex);
 }
 setInterval(autoFeedbackSlide, 4000);
 
-// Manual navigation
 document.querySelector(".next").addEventListener("click", () => {
   feedbackIndex = (feedbackIndex + 1) % feedbackSlides.length;
   showFeedbackSlide(feedbackIndex);
@@ -50,12 +47,11 @@ document.querySelector(".prev").addEventListener("click", () => {
   showFeedbackSlide(feedbackIndex);
 });
 
-// Initialize
 showFeedbackSlide(feedbackIndex);
 
 document.addEventListener("DOMContentLoaded", function () {
     const counters = document.querySelectorAll(".counter");
-    let started = false; // Prevent running twice
+    let started = false;
 
     function startCounter() {
         counters.forEach(counter => {
@@ -63,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const updateCounter = () => {
                 const target = +counter.getAttribute("data-target");
                 const count = +counter.innerText;
-                const increment = target / 200; // Speed control
+                const increment = target / 200;
                 if (count < target) {
                     counter.innerText = Math.ceil(count + increment);
                     setTimeout(updateCounter, 10);
@@ -96,17 +92,15 @@ document.addEventListener("DOMContentLoaded", function () {
   toggleBtn.addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
 
-    // Save preference
     if (document.body.classList.contains("dark-mode")) {
       localStorage.setItem("theme", "dark");
-      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>'; // Change icon
+      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
     } else {
       localStorage.setItem("theme", "light");
       toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
     }
   });
 
-  // Load saved theme
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
     toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
@@ -131,7 +125,6 @@ window.addEventListener("scroll", function() {
   }
 });
 
-// Scroll to top smoothly
 document.getElementById("scrollTopBtn").addEventListener("click", function() {
   window.scrollTo({
     top: 0,
