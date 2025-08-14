@@ -1607,7 +1607,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 60px 20px;
-  background-image: url('Images/background.jpg');
+  background-image: url('Images1/background.jpg');
   background-size: cover;
   background-position: center;
   margin: 0 30px;
@@ -2382,3 +2382,4 @@ body {
     margin-top: 30px;
   }
 }
+
