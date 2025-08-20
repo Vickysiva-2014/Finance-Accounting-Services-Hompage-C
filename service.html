@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Financial & Accounting Services</title>
+  <link rel="stylesheet" href="service.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+  <div class="logo">
+    <a href="#" class="logo-text">Stackly</a>
+  </div>
+   <button class="menu-toggle">&#9776;</button>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="404_1.html">FAQ</a></li>
+        <!-- <li><a href="404_1.html">Dashboard</a></li> -->
+        <li><a href="404_1.html">Blog</a></li>
+        <li><a href="404_1.html">Contact</a></li>
+        <li><button class="btn-appointment" onclick="location.href='404_1.html'">Make Appointment</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr class="divider" />
+
+  <section class="hero">
+  <div class="hero-content">
+    <h1>Services</h1>
+    <p><a href="index.html">Home</a> &gt; <span>Services</span></p>
+  </div>
+</section>
+
+<section class="ourservices-section" data-aos="fade-up" data-aos-delay="300">
+  <h5>Our Services</h5>
+  <h2>Service We Provide</h2>
+  <p>We provide a wide range of financial and accounting services tailored to meet your business needs.</p>
+
+  <div class="services-grid" data-aos="fade-up" data-aos-delay="500">
+  <div class="ourservice-card fixed">
+  <div class="icon">
+    <img src="Images1/icon1.png" class="icon-img single-icon" alt="Icon" />
+  </div>
+  <h3>Accounting</h3>
+  <p>We offer comprehensive accounting services to help you manage your finances efficiently and ensure compliance with all regulations.</p>
+  <a href="404_1.html">Learn More →</a>
+</div>
+
+    <div class="ourservice-card" data-aos="fade-up" data-aos-delay="600">
+      <div class="hover-bg"></div>
+    <div class="icon">
+    <img src="Images1/icon2.png" class="icon-img default-icon" alt="Default Icon" />
+    <img src="Images1/icon-new1.png" class="icon-img hover-icon" alt="Hover Icon" />
+  </div>
+      <h3>Tax Consulting</h3>
+      <p>Our expert tax consulting services help you optimize your tax strategy, minimize liabilities, and stay compliant with current tax laws.</p>
+      <a href="404_1.html">Learn More →</a>
+    </div>
+
+    <div class="ourservice-card" data-aos="fade-up" data-aos-delay="700">
+  <div class="hover-bg"></div>
+  <div class="icon">
+    <img src="Images1/icon3.png" class="icon-img default-icon" alt="Default Icon" />
+    <img src="Images1/icon-new2.png" class="icon-img hover-icon" alt="Hover Icon" />
+  </div>
+  <h3>Investment</h3>
+  <p>We provide strategic investment guidance to help you grow your wealth and achieve your long-term financial goals.</p>
+  <br>
+  <a href="404_1.html">Learn More →</a>
+</div>
+
+
+    <div class="ourservice-card" data-aos="fade-up" data-aos-delay="800">
+      <div class="hover-bg"></div>
+      <div class="icon">
+    <img src="Images1/icon4.png" class="icon-img default-icon" alt="Default Icon" />
+    <img src="Images1/icon-new3.png" class="icon-img hover-icon" alt="Hover Icon" />
+  </div>
+      <h3>Project Management</h3>
+      <p>We offer end-to-end project management solutions to ensure your initiatives are delivered on time, within budget, and to the highest quality standards.</p>
+      <a href="404_1.html">Learn More →</a>
+    </div>
+
+    <div class="ourservice-card" data-aos="fade-up" data-aos-delay="900">
+      <div class="hover-bg"></div>
+      <div class="icon">
+    <img src="Images1/icon5.png" class="icon-img default-icon" alt="Default Icon" />
+    <img src="Images1/icon-new4.png" class="icon-img hover-icon" alt="Hover Icon" />
+  </div>
+      <h3>Financial Planning</h3>
+      <p>Our financial planning services are designed to help you make informed decisions, manage risks, and secure your financial future.</p>
+      <a href="404_1.html">Learn More →</a>
+    </div>
+
+    <div class="ourservice-card" data-aos="fade-up" data-aos-delay="1000">
+      <div class="hover-bg"></div>
+      <div class="icon">
+    <img src="Images1/icon6.png" class="icon-img default-icon" alt="Default Icon" />
+    <img src="Images1/icon-new5.png" class="icon-img hover-icon" alt="Hover Icon" />
+  </div>
+      <h3>Data Entry</h3>
+      <p>We deliver accurate and efficient data entry services to help you maintain organized records and streamline business operations.</p>
+      <a href="404_1.html">Learn More →</a>
+    </div>
+  </div>
+</section>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true     
+  });
+
+  const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    let count = +counter.innerText;
+    const increment = Math.ceil(target / 100);
+
+    if (count < target) {
+      counter.innerText = Math.min(count + increment, target);
+      setTimeout(updateCount, 30);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  updateCount();
+});
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
