@@ -50,12 +50,11 @@ position: absolute;
     animation-delay: calc(var(--i) * (3s / 50));
 }
 
-form, 
 .btn, 
 .input-box, 
 .forgot-pass {
     position: relative;
-    z-index: 10; /* 👈 higher than spans */
+    z-index: 1; /* 👈 higher than spans */
 }
 
 .btn {
@@ -371,6 +370,7 @@ form,
   z-index: 2;
 
 }
+
 
 
 
