@@ -50,11 +50,10 @@ position: absolute;
     animation-delay: calc(var(--i) * (3s / 50));
 }
 
-.btn, 
-.input-box, 
-.forgot-pass {
-    position: relative;
-    z-index: 1; /* 👈 higher than spans */
+.input-box,
+.forgot-pass,
+.btn {
+    z-index: 1; /* keep form elements above spans */
 }
 
 .btn {
@@ -142,15 +141,18 @@ position: absolute;
     font-weight: 600;
     color: #1f293a;
     margin-top: 10px;
-    z-index: 1;
-    transition: all 0.3s ease; /* smooth animation */
+    z-index: 9999;            /* bring button to front */
+    position: relative;       /* make z-index effective */
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.3s ease;
 }
 
-/* Hover effect */
 .btn:hover {
-    background: #00c9b7;  /* slightly darker color */
-    transform: scale(1.05); /* make it pop */
-    color: #fff;            /* change text color */
+    background: #00ccb5;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -370,6 +372,7 @@ position: absolute;
   z-index: 2;
 
 }
+
 
 
 
