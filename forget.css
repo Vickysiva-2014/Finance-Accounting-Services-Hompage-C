@@ -101,6 +101,7 @@ body {
   top: -5px;
   font-size: 12px;
   color: #00c39a;
+  background: Black;
 }
 
 .btn {
@@ -193,3 +194,4 @@ body {
     opacity: 0;
   }
 }
+
