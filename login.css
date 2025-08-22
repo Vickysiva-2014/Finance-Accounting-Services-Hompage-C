@@ -48,7 +48,6 @@ position: absolute;
     transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
     animation: animateBlink 3s linear infinite;
     animation-delay: calc(var(--i) * (3s / 50));
-	z-index: -1;
 }
 
 form, 
@@ -372,6 +371,7 @@ form,
   z-index: 2;
 
 }
+
 
 
 
