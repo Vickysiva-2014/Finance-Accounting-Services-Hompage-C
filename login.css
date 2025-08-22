@@ -139,7 +139,16 @@ position: absolute;
     color: #1f293a;
     margin-top: 10px;
     z-index: 1;
+    transition: all 0.3s ease; /* smooth animation */
 }
+
+/* Hover effect */
+.btn:hover {
+    background: #00c9b7;  /* slightly darker color */
+    transform: scale(1.05); /* make it pop */
+    color: #fff;            /* change text color */
+}
+
 
 /* Right Section: Register */
 .login-right {
@@ -357,6 +366,7 @@ position: absolute;
   z-index: 2;
 
 }
+
 
 
 
