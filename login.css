@@ -48,14 +48,20 @@ position: absolute;
     transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
     animation: animateBlink 3s linear infinite;
     animation-delay: calc(var(--i) * (3s / 50));
+	z-index: -1;
 }
 
-.input-box,
-.forgot-pass
-{
-    z-index: 1; /* keep form elements above spans */
+form, 
+.btn, 
+.input-box, 
+.forgot-pass {
+    position: relative;
+    z-index: 10; /* 👈 higher than spans */
 }
 
+.btn {
+    pointer-events: auto; /* ensure it's clickable */
+}
 
 @keyframes animateBlink {
     0% { background: #00ffe0; }
@@ -366,6 +372,7 @@ position: absolute;
   z-index: 2;
 
 }
+
 
 
 
