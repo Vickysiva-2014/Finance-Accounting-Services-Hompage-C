@@ -40,7 +40,7 @@ position: absolute;
     left: 0;
     width: 30px;
     height: 4px;
-    left: 232px;
+    left: 220px;
     top: 320px;
     background: #00ffe0;
     border-radius: 20px;
@@ -162,6 +162,7 @@ position: absolute;
 .login-right h2 {
     font-size: 2em;
     margin-bottom: 20px;
+	margin-top: -20px;
 }
 
 .login-right p {
@@ -356,4 +357,5 @@ position: absolute;
   z-index: 2;
 
 }
+
 
