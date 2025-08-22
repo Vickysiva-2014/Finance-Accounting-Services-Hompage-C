@@ -162,7 +162,6 @@ position: absolute;
 .login-right h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    margin-top: -50px;
 }
 
 .login-right p {
@@ -357,3 +356,4 @@ position: absolute;
   z-index: 2;
 
 }
+
