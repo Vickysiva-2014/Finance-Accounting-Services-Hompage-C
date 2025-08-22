@@ -1,0 +1,195 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fffbe9;
+  overflow: hidden;
+}
+
+/* Container with fire split animation */
+.split-container {
+  position: relative;
+  width: 500px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(81, 255, 0, 0.5);
+  overflow: hidden;
+  color: #fff;
+  z-index: 2;
+}
+
+.split-container::before,
+.split-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(180deg, #00c39a, transparent);
+  animation: fireSplit 3s infinite ease-in-out alternate;
+  z-index: -1;
+}
+
+.split-container::before {
+  left: 0;
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+}
+
+.split-container::after {
+  right: 0;
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+  animation-delay: 1.5s;
+}
+
+@keyframes fireSplit {
+  0% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(-15px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.7; }
+}
+
+/* Form styles */
+.form-container h2 {
+  font-size: 24px;
+   color: black;
+  margin-bottom: 10px;
+}
+
+.form-container p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.747);
+  color: black;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: Black;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+  top: -5px;
+  font-size: 12px;
+  color: #00c39a;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #00c39a, #00c399de);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.8);
+}
+
+.back-login {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.back-login a {
+  color: #00c39a;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back-login a:hover {
+  text-decoration: underline;
+}
+
+
+/* Balloon Animation */
+.balloon {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 50px;
+  background: #00c39a;
+  border-radius: 50%;
+  animation: floatBalloon 8s linear infinite;
+  opacity: 0.9;
+}
+
+.balloon::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: #444;
+  transform: translateX(-50%);
+}
+
+/* Multiple balloons with different speeds & positions */
+.balloon:nth-child(1) {
+  left: 10%;
+  animation-duration: 12s;
+}
+.balloon:nth-child(2) {
+  left: 30%;
+  animation-duration: 14s;
+}
+.balloon:nth-child(3) {
+  left: 50%;
+  animation-duration: 10s;
+}
+.balloon:nth-child(4) {
+  left: 70%;
+  animation-duration: 13s;
+}
+.balloon:nth-child(5) {
+  left: 90%;
+  animation-duration: 15s;
+}
+
+@keyframes floatBalloon {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-120vh) scale(1.2);
+    opacity: 0;
+  }
+}

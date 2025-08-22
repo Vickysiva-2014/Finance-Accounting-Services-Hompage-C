@@ -119,3 +119,16 @@ const images = document.querySelectorAll(".arc-img");
     document.querySelector(".nav-links").classList.toggle("active");
   });
 
+  const container = document.querySelector('.login-container');
+  const swapBtn = document.getElementById('swapBtn');
+
+  swapBtn.addEventListener('click', () => {
+    container.classList.toggle('swap');
+  });
+
+
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Your message has been sent successfully!");
+  this.reset();
+});
