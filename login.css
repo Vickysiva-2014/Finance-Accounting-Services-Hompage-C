@@ -51,8 +51,8 @@ position: absolute;
 }
 
 .input-box,
-.forgot-pass,
-.btn {
+.forgot-pass
+{
     z-index: 1; /* keep form elements above spans */
 }
 
@@ -366,6 +366,7 @@ position: absolute;
   z-index: 2;
 
 }
+
 
 
 
