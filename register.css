@@ -78,10 +78,10 @@ body {
     border: none;
     padding: 15px 40px;
     border-radius: 30px;
+    text-decoration: none;
     font-size: 1em;
     font-weight: 600;
     cursor: pointer;
-    text-decoration: none;
     transition: 0.3s;
 }
 
@@ -312,5 +312,4 @@ body {
 .login-left {
     position: relative; /* needed so z-index applies */
     z-index: 10;        /* higher than circles */
-
 }
