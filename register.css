@@ -54,9 +54,9 @@ body {
     line-height: 1.5;
 }
 
-.btn-register {
-    background: #1f293a;
-    color: #00ffe0;
+.btn {
+    background: #1c9886;
+    color: #00ffe1bb;
     border: none;
     padding: 15px 40px;
     border-radius: 30px;
@@ -67,7 +67,7 @@ body {
     transition: 0.3s;
 }
 
-.btn-register:hover {
+.btn:hover {
     background: #0d1a2a;
     color: #0ef;
 }
@@ -94,6 +94,7 @@ body {
     flex: 1;
     background: #fff8e1;
     color: black;
+    margin-top: -20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,13 +106,13 @@ body {
 
 .animation-container span {
     position: absolute;
-    left: 150px;
-    top: 310px;
-    width: 30px;
+    left: 185px;
+    top: 315px;
+    width: 25px;
     height: 4px;
     background: #00ffe0;
     border-radius: 10px;
-    transform-origin: 150px;
+    transform-origin: 135px;
     transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
     animation: animateBlink 3s linear infinite;
     animation-delay: calc(var(--i) * (3s / 50));
@@ -285,9 +286,4 @@ body {
 .login-left {
     position: relative; /* needed so z-index applies */
     z-index: 10;        /* higher than circles */
-
 }
-
-
-
-
