@@ -1,0 +1,288 @@
+/* ===================== GLOBAL ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #fff8e1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+/* ===================== LEFT SECTION (REGISTER) ===================== */
+.login-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+    color: #1f293a;
+    z-index: 10; /* Keep above background circles */
+}
+
+.login-left .register-logo img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.login-left h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-top: -50px;
+}
+
+.login-left p {
+    margin-bottom: 30px;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.btn-register {
+    background: #1f293a;
+    color: #00ffe0;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-register:hover {
+    background: #0d1a2a;
+    color: #0ef;
+}
+
+.back-home {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.back-home a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #6c63ff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.back-home a:hover {
+  color: #4a47d1;
+}
+
+/* ===================== RIGHT SECTION (LOGIN) ===================== */
+.login-right {
+    flex: 1;
+    background: #fff8e1;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.animation-container span {
+    position: absolute;
+    left: 210px;
+    top: 332px;
+    width: 30px;
+    height: 4px;
+    background: #00ffe0;
+    border-radius: 10px;
+    transform-origin: 150px;
+    transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
+    animation: animateBlink 3s linear infinite;
+    animation-delay: calc(var(--i) * (3s / 50));
+}
+
+.input-box,
+.forgot-pass,
+.btn {
+    z-index: 1;
+}
+
+@keyframes animateBlink {
+    0% { background: #00ffe0; }
+    25% { background: #2c4766; }
+    50% { background: #00ffe0; }
+    75% { background: #2c4766; }
+    100% { background: #00ffe0; }
+}
+
+.input-box {
+    position: relative;
+    margin: 25px 0;
+    z-index: 1;
+}
+
+.input-box input {
+    width: 300px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #2c4766;
+    outline: none;
+    border-radius: 40px;
+    font-size: 1em;
+    color: black;
+    padding: 0 20px;
+    transition: 0.5s;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+    border-color: #00ffe0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: black;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: 1px;
+    font-size: 0.8em;
+    background: #1f293a;
+    padding: 0 6px;
+    color: #00ffe0;
+}
+
+.forgot-pass {
+    margin: -15px 0 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+.forgot-pass a {
+    font-size: 0.85em;
+    color: black;
+    text-decoration: none;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    background: #00ffe0;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: #1f293a;
+    margin-top: 10px;
+    z-index: 1;
+}
+
+/* ===================== BACKGROUND CIRCLES ===================== */
+#container {
+    background: linear-gradient(135deg, #00efdb 0%,#00e5a8 100%);
+    position: relative;
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#container-inside {
+    position: relative;
+    margin: 0 auto;
+    width: 50%;
+    overflow: visible;
+}
+
+#circle-small, #circle-medium, #circle-large, #circle-xlarge, #circle-xxlarge {
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+}
+
+#circle-small {
+    width: 200px; height: 200px; top: 200px; left: 80px; opacity: 0.4;
+    animation: circle-small-scale 3s ease-in-out infinite alternate;
+}
+#circle-medium {
+    width: 400px; height: 400px; top: 100px; left: -20px; opacity: 0.3;
+    animation: circle-small-scale 3s ease-in-out infinite alternate 0.3s;
+}
+#circle-large {
+    width: 600px; height: 600px; top: 10px; left: -120px; opacity: 0.2;
+    animation: circle-small-scale 3s ease-in-out infinite alternate 0.6s;
+}
+#circle-xlarge {
+    width: 1200px; height: 1200px; top: -250px; left: -600px; opacity: 0.1;
+    animation: circle-small-scale 3s ease-in-out infinite alternate 0.9s;
+}
+#circle-xxlarge {
+    width: 1500px; height: 1500px; top: -400px; left: -750px; opacity: 0.05;
+    animation: circle-small-scale 3s ease-in-out infinite alternate 1.2s;
+}
+
+@keyframes circle-small-scale {
+    0% { transform: scale(1.0); }
+    100% { transform: scale(1.1); }
+}
+
+/* Keep circles behind */
+#container, #container-inside, 
+#circle-small, #circle-medium, #circle-large, #circle-xlarge, #circle-xxlarge {
+    z-index: 0;
+}
+
+/* ===================== SWAP ANIMATION ===================== */
+.login-container.swap .login-right {
+  transform: translateX(-100%);
+  z-index: 1;
+}
+.login-container.swap .login-left {
+  transform: translateX(100%);
+  z-index: 2;
+}
+.login-container.swap .container-inside {
+  transform: translateX(-100%);
+  z-index: 2;
+}
+
+
+#container,
+#container-inside,
+#circle-small,
+#circle-medium,
+#circle-large,
+#circle-xlarge,
+#circle-xxlarge {
+    z-index: 0;   /* keep them in the back */
+}
+
+/* Bring the login-right section to the front */
+.login-left {
+    position: relative; /* needed so z-index applies */
+    z-index: 10;        /* higher than circles */
+}
