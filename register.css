@@ -78,10 +78,10 @@ body {
     border: none;
     padding: 15px 40px;
     border-radius: 30px;
-    text-decoration: none;
     font-size: 1em;
     font-weight: 600;
     cursor: pointer;
+    text-decoration: none;
     transition: 0.3s;
 }
 
@@ -112,7 +112,6 @@ body {
     flex: 1;
     background: #fff8e1;
     color: black;
-    margin-top: -20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -122,10 +121,20 @@ body {
     overflow: hidden;
 }
 
+.animation-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* keeps it perfectly centered */
+    width: 350px;   /* size of circle */
+    height: 350px;
+    pointer-events: none; /* so it doesn’t block input clicks */
+}
+
 .animation-container span {
     position: absolute;
-    left: 185px;
-    top: 315px;
+    top: 54%;
+    left: 12%;
     width: 25px;
     height: 4px;
     background: #00ffe0;
@@ -135,6 +144,7 @@ body {
     animation: animateBlink 3s linear infinite;
     animation-delay: calc(var(--i) * (3s / 50));
 }
+
 
 .input-box,
 .forgot-pass,
@@ -312,4 +322,5 @@ body {
 .login-left {
     position: relative; /* needed so z-index applies */
     z-index: 10;        /* higher than circles */
+
 }

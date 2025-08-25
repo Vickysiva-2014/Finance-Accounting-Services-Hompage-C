@@ -35,15 +35,24 @@ body {
     position: relative;
     overflow: hidden;
 }
+.animation-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* keeps it perfectly centered */
+    width: 350px;   /* size of circle */
+    height: 350px;
+    pointer-events: none; /* so it doesn’t block input clicks */
+}
+
 .animation-container span {
-position: absolute;
-    left: 0;
+    position: absolute;
+    top: 54%;
+    left: 15%;
     width: 30px;
     height: 4px;
-    left: 232px;
-    top: 350px;
     background: #00ffe0;
-    border-radius: 20px;
+    border-radius: 10px;
     transform-origin: 120px;
     transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
     animation: animateBlink 3s linear infinite;
@@ -56,6 +65,9 @@ position: absolute;
     z-index: 1; /* keep form elements above spans */
 }
 
+.btn {
+    pointer-events: auto; /* ensure it's clickable */
+}
 
 @keyframes animateBlink {
     0% { background: #00ffe0; }
@@ -164,6 +176,7 @@ position: absolute;
     text-align: center;
     color: #1f293a;
     z-index: 5000;
+    overflow: hidden;
 }
 
 .login-right .register-logo img {
@@ -174,7 +187,7 @@ position: absolute;
 .login-right h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    margin-top: -50px;
+	margin-top: -20px;
 }
 
 .login-right p {
@@ -367,4 +380,15 @@ position: absolute;
 .login-container.swap .container-inside{
   transform: translateX(-100%);
   z-index: 2;
+
 }
+
+
+
+
+
+
+
+
+
+
