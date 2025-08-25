@@ -54,20 +54,19 @@ body {
     line-height: 1.5;
 }
 
-.btn {
-    background: #1c9886;
-    color: #00ffe1bb;
+.btn-register {
+    background: #1f293a;
+    color: #00ffe0;
     border: none;
     padding: 15px 40px;
     border-radius: 30px;
-    text-decoration: none;
     font-size: 1em;
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.btn:hover {
+.btn-register:hover {
     background: #0d1a2a;
     color: #0ef;
 }
@@ -202,6 +201,11 @@ body {
     z-index: 1;
 }
 
+.btn:hover {
+    background: #0d1a2a;
+    color: #0ef;
+}
+
 /* ===================== BACKGROUND CIRCLES ===================== */
 #container {
     background: linear-gradient(135deg, #00efdb 0%,#00e5a8 100%);
@@ -286,4 +290,5 @@ body {
 .login-left {
     position: relative; /* needed so z-index applies */
     z-index: 10;        /* higher than circles */
+
 }
