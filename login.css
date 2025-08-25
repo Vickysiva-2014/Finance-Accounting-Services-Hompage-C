@@ -40,8 +40,8 @@ position: absolute;
     left: 0;
     width: 30px;
     height: 4px;
-    left: 200px;
-    top: 300px;
+    left: 232px;
+    top: 350px;
     background: #00ffe0;
     border-radius: 20px;
     transform-origin: 120px;
@@ -56,9 +56,6 @@ position: absolute;
     z-index: 1; /* keep form elements above spans */
 }
 
-.btn {
-    pointer-events: auto; /* ensure it's clickable */
-}
 
 @keyframes animateBlink {
     0% { background: #00ffe0; }
@@ -177,7 +174,7 @@ position: absolute;
 .login-right h2 {
     font-size: 2em;
     margin-bottom: 20px;
-	margin-top: -20px;
+    margin-top: -50px;
 }
 
 .login-right p {
@@ -370,15 +367,4 @@ position: absolute;
 .login-container.swap .container-inside{
   transform: translateX(-100%);
   z-index: 2;
-
 }
-
-
-
-
-
-
-
-
-
-
