@@ -54,6 +54,24 @@ body {
     line-height: 1.5;
 }
 
+.btn {
+    background: #1c9886;
+    color: #00ffe1bb;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0d1a2a;
+    color: #0ef;
+}
+
 .btn-register {
     background: #1f293a;
     color: #00ffe0;
@@ -198,12 +216,15 @@ body {
     font-weight: 600;
     color: #1f293a;
     margin-top: 10px;
-    z-index: 1;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background: #0d1a2a;
-    color: #0ef;
+    background: #00ccb5;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* ===================== BACKGROUND CIRCLES ===================== */
@@ -290,5 +311,4 @@ body {
 .login-left {
     position: relative; /* needed so z-index applies */
     z-index: 10;        /* higher than circles */
-
 }
