@@ -112,7 +112,7 @@ body {
     height: 4px;
     background: #00ffe0;
     border-radius: 10px;
-    transform-origin: 120px;
+    transform-origin: 135px;
     transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
     animation: animateBlink 3s linear infinite;
     animation-delay: calc(var(--i) * (3s / 50));
@@ -286,6 +286,4 @@ body {
 .login-left {
     position: relative; /* needed so z-index applies */
     z-index: 10;        /* higher than circles */
-
 }
-
