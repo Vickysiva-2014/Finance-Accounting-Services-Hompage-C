@@ -105,13 +105,13 @@ body {
 
 .animation-container span {
     position: absolute;
-    left: 150px;
+    left: 160px;
     top: 310px;
     width: 30px;
     height: 4px;
     background: #00ffe0;
     border-radius: 10px;
-    transform-origin: 100px;
+    transform-origin: 120px;
     transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
     animation: animateBlink 3s linear infinite;
     animation-delay: calc(var(--i) * (3s / 50));
@@ -287,4 +287,5 @@ body {
     z-index: 10;        /* higher than circles */
 
 }
+
 
